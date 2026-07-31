@@ -262,7 +262,6 @@ img {
 }
 
 .mobile-menu a {
-	position: relative;
 	display: block;
 	padding: 0.9rem 0.2rem;
 	font-size: 0.82rem;
@@ -277,12 +276,18 @@ img {
 	color: var(--gold-dark);
 }
 
-.mobile-menu a.is-active::after {
+.mobile-menu-label {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 0.4rem;
+}
+
+.mobile-menu a.is-active .mobile-menu-label::after {
 	content: "";
 	position: absolute;
-	left: 0.2rem;
-	right: 0.2rem;
-	bottom: 0.5rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	height: 2px;
 	background: var(--gold);
 }

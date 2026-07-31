@@ -89,7 +89,7 @@ export function Navbar({ t, lang, onToggleLang }: Props) {
                 aria-current={link.href.slice(1) === activeId ? "true" : undefined}
                 onClick={() => setMenuOpen(false)}
               >
-                {link.label}
+                <span className="mobile-menu-label">{link.label}</span>
               </a>
             </li>
           ))}
