@@ -34,6 +34,16 @@ export function Footer({ t }: { t: Content }) {
 				</a>
 			</p>
 			<p className="footer-copy">{t.footer.copyright}</p>
+			<p className="footer-credit">
+				Developed by{" "}
+				<a
+					href="https://www.linkedin.com/in/emilianodasilveira/?locale=en-US"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Emiliano da Silveira
+				</a>
+			</p>
 		</footer>
 	);
 }
