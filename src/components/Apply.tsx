@@ -1,8 +1,6 @@
 import type { Content } from "../i18n/content";
+import { FORM_URL } from "../constants";
 import { Reveal } from "./Reveal";
-
-const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfnA65bQebnprVFZLYxVucycUM--7icn_joy2GKeJZuFRDDnQ/viewform";
 
 export function Apply({ t }: { t: Content }) {
   return (

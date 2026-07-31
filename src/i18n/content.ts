@@ -35,6 +35,7 @@ export interface Content {
 		desc: string;
 		cta1: string;
 		cta2: string;
+		cta3: string;
 	};
 	about: {
 		tag: string;
@@ -122,6 +123,7 @@ export const CONTENT: Record<Lang, Content> = {
 			desc: "ARISE Initiative, Inc. helps students persist, graduate, and thrive. We provide mentorship, coaching, advising, leadership development, and financial aid guidance, all completely free for the student. ARISE was founded by Dr. Hamza Seidu Wedam and grew out of his doctoral research on student success.",
 			cta1: "Our Services",
 			cta2: "Meet the Founder",
+			cta3: "Apply Now",
 		},
 		about: {
 			tag: "About ARISE",
@@ -211,14 +213,14 @@ export const CONTENT: Record<Lang, Content> = {
 					id: "team-vedad",
 					src: "/assets/vedad-delic.png",
 					name: "Vedad Delic, Ph.D.",
-					role: "Grant Writer & Academic Consultant",
+					role: "Grant Writer",
 					bio: "Research scientist at the East Orange VA NJ Health Care System and Assistant Professor at Rutgers New Jersey Medical School. He has secured millions of dollars in competitive federal research funding.",
 				},
 				{
 					id: "team-tyrone",
 					src: "/assets/tyrone-taylor.png",
 					name: "Tyrone Taylor",
-					role: "Grant Writer & Academic Consultant",
+					role: "Grant Manager",
 					bio: "Chief Financial Officer of the VA New Jersey Health Care System, with three decades of experience leading federal finance, budgeting, and mentorship programs for public service careers.",
 				},
 			],
@@ -272,6 +274,7 @@ export const CONTENT: Record<Lang, Content> = {
 			desc: "A ARISE Initiative, Inc. ajuda estudantes a persistir, se formar e prosperar. Oferecemos mentoria, coaching, orientação, desenvolvimento de liderança e apoio com auxílio financeiro, tudo totalmente gratuito para o estudante. A ARISE foi fundada pelo Dr. Hamza Seidu Wedam a partir de sua pesquisa de doutorado sobre sucesso estudantil.",
 			cta1: "Nossos Serviços",
 			cta2: "Conheça o Fundador",
+			cta3: "Inscreva-se",
 		},
 		about: {
 			tag: "Sobre a ARISE",
@@ -361,14 +364,14 @@ export const CONTENT: Record<Lang, Content> = {
 					id: "team-vedad",
 					src: "/assets/vedad-delic.png",
 					name: "Vedad Delic, Ph.D.",
-					role: "Redator de Propostas e Consultor Acadêmico",
+					role: "Redator de Propostas",
 					bio: "Cientista pesquisador no East Orange VA NJ Health Care System e Professor Assistente na Rutgers New Jersey Medical School. Já captou milhões de dólares em financiamento federal competitivo para pesquisa.",
 				},
 				{
 					id: "team-tyrone",
 					src: "/assets/tyrone-taylor.png",
 					name: "Tyrone Taylor",
-					role: "Redator de Propostas e Consultor Acadêmico",
+					role: "Gerente de Subvenções",
 					bio: "Diretor Financeiro do VA New Jersey Health Care System, com três décadas de experiência liderando finanças federais, orçamento e programas de mentoria para carreiras no serviço público.",
 				},
 			],

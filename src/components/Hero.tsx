@@ -1,4 +1,5 @@
 import type { Content } from "../i18n/content";
+import { FORM_URL } from "../constants";
 import { Logo } from "./Logo";
 
 export function Hero({ t }: { t: Content }) {
@@ -15,7 +16,10 @@ export function Hero({ t }: { t: Content }) {
 			<p className="hero-acronym">{t.hero.acronym}</p>
 			<p className="hero-desc">{t.hero.desc}</p>
 			<div className="hero-ctas">
-				<a href="#services" className="btn-gold">
+				<a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="btn-gold">
+					{t.hero.cta3}
+				</a>
+				<a href="#services" className="btn-outline">
 					{t.hero.cta1}
 				</a>
 				<a
