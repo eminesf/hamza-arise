@@ -24,6 +24,7 @@ export interface Content {
 		mission: string;
 		services: string;
 		team: string;
+		apply: string;
 		contact: string;
 	};
 	hero: {
@@ -79,6 +80,15 @@ export interface Content {
 		supportTag: string;
 		members: TeamMember[];
 	};
+	apply: {
+		tag: string;
+		title: string;
+		titleEm: string;
+		desc: string;
+		cta: string;
+		qrAlt: string;
+		qrHint: string;
+	};
 	contact: {
 		tag: string;
 		title: string;
@@ -100,6 +110,7 @@ export const CONTENT: Record<Lang, Content> = {
 			mission: "Mission",
 			services: "Services",
 			team: "Team",
+			apply: "Apply",
 			contact: "Contact",
 		},
 		hero: {
@@ -212,6 +223,15 @@ export const CONTENT: Record<Lang, Content> = {
 				},
 			],
 		},
+		apply: {
+			tag: "Get Started",
+			title: "Ready to",
+			titleEm: "apply?",
+			desc: "Scan the QR code with your phone, or tap the button below to open our enrollment form. It only takes a few minutes, and it's completely free.",
+			cta: "Open the Enrollment Form",
+			qrAlt: "QR code linking to the ARISE enrollment form",
+			qrHint: "Scan with your phone camera",
+		},
 		contact: {
 			tag: "Get Involved",
 			title: "Partner with",
@@ -240,6 +260,7 @@ export const CONTENT: Record<Lang, Content> = {
 			mission: "Missão",
 			services: "Serviços",
 			team: "Equipe",
+			apply: "Inscreva-se",
 			contact: "Contato",
 		},
 		hero: {
@@ -351,6 +372,15 @@ export const CONTENT: Record<Lang, Content> = {
 					bio: "Diretor Financeiro do VA New Jersey Health Care System, com três décadas de experiência liderando finanças federais, orçamento e programas de mentoria para carreiras no serviço público.",
 				},
 			],
+		},
+		apply: {
+			tag: "Comece Agora",
+			title: "Pronto para",
+			titleEm: "se inscrever?",
+			desc: "Escaneie o QR code com o celular, ou toque no botão abaixo para abrir nosso formulário de inscrição. Leva só alguns minutos, e é totalmente gratuito.",
+			cta: "Abrir Formulário de Inscrição",
+			qrAlt: "QR code que leva ao formulário de inscrição da ARISE",
+			qrHint: "Escaneie com a câmera do celular",
 		},
 		contact: {
 			tag: "Participe",

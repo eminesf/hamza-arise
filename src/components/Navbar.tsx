@@ -17,6 +17,7 @@ export function Navbar({ t, lang, onToggleLang }: Props) {
     { href: "#mission", label: t.nav.mission },
     { href: "#services", label: t.nav.services },
     { href: "#team", label: t.nav.team },
+    { href: "#apply", label: t.nav.apply },
     { href: "#contact", label: t.nav.contact },
   ];
 

@@ -7,6 +7,7 @@ import { Services } from "./components/Services";
 import { Impact } from "./components/Impact";
 import { QuoteBanner } from "./components/QuoteBanner";
 import { Team } from "./components/Team";
+import { Apply } from "./components/Apply";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
@@ -25,6 +26,7 @@ export default function App() {
         <Impact t={t} />
         <QuoteBanner t={t} />
         <Team t={t} />
+        <Apply t={t} />
         <Contact t={t} />
       </main>
       <Footer t={t} />
