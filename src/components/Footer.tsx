@@ -33,7 +33,9 @@ export function Footer({ t }: { t: Content }) {
 					{t.footer.founderLink}
 				</a>
 			</p>
-			<p className="footer-copy">{t.footer.copyright}</p>
+			<p className="footer-copy">
+				© {new Date().getFullYear()} {t.footer.copyright}
+			</p>
 			<p className="footer-credit">
 				Developed by{" "}
 				<a

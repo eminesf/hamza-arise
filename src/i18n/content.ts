@@ -247,7 +247,7 @@ export const CONTENT: Record<Lang, Content> = {
 		footer: {
 			tagline: "“Rise From Where You Are.”",
 			founderLink: "Founded by Dr. Hamza Seidu Wedam. Visit his site",
-			copyright: "© 2026 ARISE Initiative, Inc.",
+			copyright: "ARISE Initiative, Inc.",
 		},
 		seo: {
 			title:
@@ -398,7 +398,7 @@ export const CONTENT: Record<Lang, Content> = {
 		footer: {
 			tagline: "“Rise From Where You Are.”",
 			founderLink: "Fundada pelo Dr. Hamza Seidu Wedam. Visite o site dele",
-			copyright: "© 2026 ARISE Initiative, Inc.",
+			copyright: "ARISE Initiative, Inc.",
 		},
 		seo: {
 			title:
