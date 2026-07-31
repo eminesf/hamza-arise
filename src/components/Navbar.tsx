@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Content, Lang } from "../i18n/content";
+import { useActiveSection } from "../hooks/useActiveSection";
 import { BrFlag, InstagramIcon, UsFlag } from "./icons";
 
 interface Props {
@@ -8,9 +9,12 @@ interface Props {
   onToggleLang: () => void;
 }
 
+const SECTION_IDS = ["about", "mission", "services", "team", "apply", "contact"];
+
 export function Navbar({ t, lang, onToggleLang }: Props) {
   const isPt = lang === "pt-br";
   const [menuOpen, setMenuOpen] = useState(false);
+  const activeId = useActiveSection(SECTION_IDS);
 
   const links = [
     { href: "#about", label: t.nav.about },
@@ -32,7 +36,13 @@ export function Navbar({ t, lang, onToggleLang }: Props) {
         <ul className="nav-links">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
+              <a
+                href={link.href}
+                className={link.href.slice(1) === activeId ? "is-active" : undefined}
+                aria-current={link.href.slice(1) === activeId ? "true" : undefined}
+              >
+                {link.label}
+              </a>
             </li>
           ))}
         </ul>
@@ -73,7 +83,12 @@ export function Navbar({ t, lang, onToggleLang }: Props) {
         <ul>
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} onClick={() => setMenuOpen(false)}>
+              <a
+                href={link.href}
+                className={link.href.slice(1) === activeId ? "is-active" : undefined}
+                aria-current={link.href.slice(1) === activeId ? "true" : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
                 {link.label}
               </a>
             </li>
