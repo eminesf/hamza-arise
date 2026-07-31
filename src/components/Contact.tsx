@@ -1,9 +1,10 @@
 import type { Content } from "../i18n/content";
+import { Reveal } from "./Reveal";
 
 export function Contact({ t }: { t: Content }) {
   return (
     <section id="contact" className="section section--white">
-      <div className="contact-wrap">
+      <Reveal className="contact-wrap">
         <span className="section-tag">{t.contact.tag}</span>
         <h2 className="section-title">
           {t.contact.title} <em>{t.contact.titleEm}</em>
@@ -30,7 +31,7 @@ export function Contact({ t }: { t: Content }) {
             </a>
           </div>
         </address>
-      </div>
+      </Reveal>
     </section>
   );
 }

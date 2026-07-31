@@ -1,17 +1,18 @@
 import type { Content } from "../i18n/content";
+import { Reveal } from "./Reveal";
 
 export function Team({ t }: { t: Content }) {
   return (
     <section id="team" className="section section--cream">
       <div className="team-wrap">
-        <div className="team-header">
+        <Reveal className="team-header">
           <span className="section-tag">{t.team.tag}</span>
           <h2 className="section-title">
             {t.team.title} <em>{t.team.titleEm}</em>
           </h2>
-        </div>
+        </Reveal>
 
-        <article className="founder-card">
+        <Reveal as="article" className="founder-card">
           <img
             src="/assets/hamza-founder.png"
             alt={t.team.founderPhotoAlt}
@@ -35,12 +36,12 @@ export function Team({ t }: { t: Content }) {
               {t.team.founderCta} &rarr;
             </a>
           </div>
-        </article>
+        </Reveal>
 
         <p className="team-subtag">{t.team.supportTag}</p>
         <div className="members-grid members-grid--last">
-          {t.team.members.map((m) => (
-            <article className="member-card" key={m.id}>
+          {t.team.members.map((m, i) => (
+            <Reveal as="article" className="member-card" delay={i * 80} key={m.id}>
               <img
                 src={m.src}
                 alt={m.name}
@@ -55,7 +56,7 @@ export function Team({ t }: { t: Content }) {
                 <p className="member-role">{m.role}</p>
                 <p className="member-bio">{m.bio}</p>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
 

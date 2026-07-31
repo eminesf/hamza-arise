@@ -15,6 +15,7 @@ export default function App() {
 
   return (
     <>
+      <div className="grain-overlay" aria-hidden="true" />
       <Navbar t={t} lang={lang} onToggleLang={toggleLang} />
       <main>
         <Hero t={t} />
