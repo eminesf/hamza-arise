@@ -3,8 +3,12 @@ import { useEffect, useState } from "react";
 /**
  * Tracks which of the given section ids is currently under the fixed nav bar
  * while scrolling. Returns null when none of them are (e.g. back up in the hero).
+ *
+ * `resetKey` should change whenever the section elements may have been
+ * unmounted and remounted elsewhere (e.g. a route change) so the observer
+ * re-queries the DOM instead of watching stale, detached nodes.
  */
-export function useActiveSection(ids: string[]): string | null {
+export function useActiveSection(ids: string[], resetKey?: unknown): string | null {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
@@ -12,7 +16,10 @@ export function useActiveSection(ids: string[]): string | null {
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
 
-    if (elements.length === 0) return;
+    if (elements.length === 0) {
+      setActive(null);
+      return;
+    }
 
     // Track intersection state cumulatively: a callback batch only reports the
     // elements whose state just changed, not every observed element.
@@ -43,7 +50,7 @@ export function useActiveSection(ids: string[]): string | null {
 
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [ids]);
+  }, [ids, resetKey]);
 
   return active;
 }

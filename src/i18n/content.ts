@@ -25,6 +25,7 @@ export interface Content {
 		about: string;
 		mission: string;
 		services: string;
+		gallery: string;
 		team: string;
 		apply: string;
 		contact: string;
@@ -69,6 +70,16 @@ export interface Content {
 		text: string;
 		stats: Stat[];
 	};
+	gallery: {
+		tag: string;
+		title: string;
+		titleEm: string;
+		desc: string;
+		cta: string;
+		pageDesc: string;
+		photoLabel: string;
+		backLink: string;
+	};
 	quoteBanner: { text: string; cite: string };
 	team: {
 		tag: string;
@@ -112,6 +123,7 @@ export const CONTENT: Record<Lang, Content> = {
 			about: "About",
 			mission: "Mission",
 			services: "Services",
+			gallery: "Gallery",
 			team: "Team",
 			apply: "Apply",
 			contact: "Contact",
@@ -122,7 +134,7 @@ export const CONTENT: Record<Lang, Content> = {
 			acronym:
 				"ARISE stands for Advancing Resilience, Inspiration, Success, and Empowerment.",
 			desc: "ARISE Initiative, Inc. helps students persist, graduate, and thrive. We provide mentorship, coaching, advising, leadership development, and financial aid guidance, all completely free for the student. ARISE was founded by Dr. Hamza Seidu Wedam and grew out of his doctoral research on student success.",
-			cta1: "Our Mission",
+			cta1: "View Gallery",
 			cta2: "Meet the Founder",
 			cta3: "Apply Now",
 		},
@@ -192,6 +204,16 @@ export const CONTENT: Record<Lang, Content> = {
 				{ value: "8", label: "Partner Institutions" },
 				{ value: "100%", label: "Free to Students" },
 			],
+		},
+		gallery: {
+			tag: "Gallery",
+			title: "Life inside",
+			titleEm: "the ARISE community",
+			desc: "A look at the mentors, students, and moments behind the mission.",
+			cta: "View Full Gallery",
+			pageDesc: "A look at the mentors, students, and moments behind the ARISE mission.",
+			photoLabel: "Photo",
+			backLink: "Back to Home",
 		},
 		quoteBanner: {
 			text: "“They come for a mentor who believes in them, a coach who helps them stay on track, and an advisor who makes college feel navigable instead of overwhelming.”",
@@ -273,6 +295,7 @@ export const CONTENT: Record<Lang, Content> = {
 			about: "Sobre",
 			mission: "Missão",
 			services: "Serviços",
+			gallery: "Galeria",
 			team: "Equipe",
 			apply: "Inscreva-se",
 			contact: "Contato",
@@ -283,7 +306,7 @@ export const CONTENT: Record<Lang, Content> = {
 			acronym:
 				"ARISE significa Advancing Resilience, Inspiration, Success, and Empowerment.",
 			desc: "A ARISE Initiative, Inc. ajuda estudantes a persistir, se formar e prosperar. Oferecemos mentoria, coaching, orientação, desenvolvimento de liderança e apoio com auxílio financeiro, tudo totalmente gratuito para o estudante. A ARISE foi fundada pelo Dr. Hamza Seidu Wedam a partir de sua pesquisa de doutorado sobre sucesso estudantil.",
-			cta1: "Nossa Missão",
+			cta1: "Ver Galeria",
 			cta2: "Conheça o Fundador",
 			cta3: "Inscreva-se",
 		},
@@ -353,6 +376,16 @@ export const CONTENT: Record<Lang, Content> = {
 				{ value: "8", label: "Instituições Parceiras" },
 				{ value: "100%", label: "Gratuito p/ Estudantes" },
 			],
+		},
+		gallery: {
+			tag: "Galeria",
+			title: "A vida dentro",
+			titleEm: "da comunidade ARISE",
+			desc: "Um retrato dos mentores, estudantes e momentos por trás da missão.",
+			cta: "Ver Galeria Completa",
+			pageDesc: "Um retrato dos mentores, estudantes e momentos por trás da missão da ARISE.",
+			photoLabel: "Foto",
+			backLink: "Voltar ao Início",
 		},
 		quoteBanner: {
 			text: "“Eles vêm por um mentor que acredita neles, um coach que os ajuda a se manter no caminho, e um orientador que faz a faculdade parecer navegável, não avassaladora.”",

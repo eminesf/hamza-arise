@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Content } from "../i18n/content";
 import { FORM_URL } from "../constants";
 import { Logo } from "./Logo";
@@ -18,9 +19,9 @@ export function Hero({ t }: { t: Content }) {
 				<a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="btn-gold">
 					{t.hero.cta3}
 				</a>
-				<a href="#mission" className="btn-outline">
+				<Link to="/galeria" className="btn-outline">
 					{t.hero.cta1}
-				</a>
+				</Link>
 				<a
 					href="https://www.hamzawedam.com/"
 					target="_blank"

@@ -9,4 +9,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.ariseorangenj.org/" />
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.ariseorangenj.org/?lang=pt-br" />
   </url>
+  <url>
+    <loc>https://www.ariseorangenj.org/galeria</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
