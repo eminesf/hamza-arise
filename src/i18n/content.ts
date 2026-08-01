@@ -16,6 +16,8 @@ export interface TeamMember {
 	name: string;
 	role: string;
 	bio: string;
+	email?: string;
+	photoPosition?: string;
 }
 
 export interface Content {
@@ -28,7 +30,6 @@ export interface Content {
 		contact: string;
 	};
 	hero: {
-		eyebrow: string;
 		subword: string;
 		tagline: string;
 		acronym: string;
@@ -53,6 +54,7 @@ export interface Content {
 		titleEm: string;
 		text: string;
 		serveText: string;
+		statusNote: string;
 	};
 	services: {
 		tag: string;
@@ -115,13 +117,12 @@ export const CONTENT: Record<Lang, Content> = {
 			contact: "Contact",
 		},
 		hero: {
-			eyebrow: "A New Jersey 501(c)(3) Nonprofit",
 			subword: "Initiative",
 			tagline: "“Rise From Where You Are.”",
 			acronym:
 				"ARISE stands for Advancing Resilience, Inspiration, Success, and Empowerment.",
 			desc: "ARISE Initiative, Inc. helps students persist, graduate, and thrive. We provide mentorship, coaching, advising, leadership development, and financial aid guidance, all completely free for the student. ARISE was founded by Dr. Hamza Seidu Wedam and grew out of his doctoral research on student success.",
-			cta1: "Our Services",
+			cta1: "Our Mission",
 			cta2: "Meet the Founder",
 			cta3: "Apply Now",
 		},
@@ -143,6 +144,7 @@ export const CONTENT: Record<Lang, Content> = {
 			text: "The mission of ARISE is to help students of all backgrounds succeed academically, professionally, and personally through mentorship, coaching, advising, leadership development, financial aid guidance, and career counseling. We exist to remove the barriers that push capable students off course, to activate potential that has been overlooked, and to develop confident, resilient students.",
 			serveText:
 				"ARISE serves students of every racial, ethnic, cultural, gender, and socioeconomic background. We pay particular attention to first-generation students, community college and four-year students, people returning to the workforce, and emerging leaders who need structure and support to reach their goals. Our doors are open to everyone.",
+			statusNote: "ARISE Initiative, Inc. is a registered New Jersey 501(c)(3) nonprofit organization.",
 		},
 		services: {
 			tag: "What We Offer",
@@ -215,6 +217,7 @@ export const CONTENT: Record<Lang, Content> = {
 					name: "Vedad Delic, Ph.D.",
 					role: "Grant Writer",
 					bio: "Research scientist at the East Orange VA NJ Health Care System and Assistant Professor at Rutgers New Jersey Medical School. He has secured millions of dollars in competitive federal research funding.",
+					email: "vedad.delic@rutgers.edu",
 				},
 				{
 					id: "team-tyrone",
@@ -222,6 +225,15 @@ export const CONTENT: Record<Lang, Content> = {
 					name: "Tyrone Taylor",
 					role: "Grant Manager",
 					bio: "Chief Financial Officer of the VA New Jersey Health Care System, with three decades of experience leading federal finance, budgeting, and mentorship programs for public service careers.",
+					email: "tcap156@verizon.net",
+				},
+				{
+					id: "team-sadia",
+					src: "/assets/sadia-zafar.jpg",
+					photoPosition: "center top",
+					name: "Sadia Zafar",
+					role: "Mentor and Healthcare Career Advisor",
+					bio: "Clinical Assistant Professor at Fairleigh Dickinson University and a board-certified Physician Assistant specializing in psychiatry. She guides students pursuing careers in medicine and the health sciences, providing mentorship, career planning, and professional development.",
 				},
 			],
 		},
@@ -266,13 +278,12 @@ export const CONTENT: Record<Lang, Content> = {
 			contact: "Contato",
 		},
 		hero: {
-			eyebrow: "Uma organização sem fins lucrativos 501(c)(3) de Nova Jersey",
 			subword: "Initiative",
 			tagline: "“Rise From Where You Are.”",
 			acronym:
 				"ARISE significa Advancing Resilience, Inspiration, Success, and Empowerment.",
 			desc: "A ARISE Initiative, Inc. ajuda estudantes a persistir, se formar e prosperar. Oferecemos mentoria, coaching, orientação, desenvolvimento de liderança e apoio com auxílio financeiro, tudo totalmente gratuito para o estudante. A ARISE foi fundada pelo Dr. Hamza Seidu Wedam a partir de sua pesquisa de doutorado sobre sucesso estudantil.",
-			cta1: "Nossos Serviços",
+			cta1: "Nossa Missão",
 			cta2: "Conheça o Fundador",
 			cta3: "Inscreva-se",
 		},
@@ -294,6 +305,7 @@ export const CONTENT: Record<Lang, Content> = {
 			text: "A missão da ARISE é ajudar estudantes de todas as origens a ter sucesso acadêmico, profissional e pessoal por meio de mentoria, coaching, orientação, desenvolvimento de liderança, apoio com auxílio financeiro e aconselhamento de carreira. Existimos para remover as barreiras que desviam estudantes capazes, ativar potenciais esquecidos e formar estudantes confiantes e resilientes.",
 			serveText:
 				"A ARISE atende estudantes de toda origem racial, étnica, cultural, de gênero e socioeconômica. Damos atenção especial a estudantes de primeira geração, estudantes de faculdades comunitárias e de quatro anos, pessoas retornando ao mercado de trabalho e líderes emergentes que precisam de estrutura e apoio para alcançar seus objetivos. Nossas portas estão abertas a todos.",
+			statusNote: "A ARISE Initiative, Inc. é uma organização sem fins lucrativos 501(c)(3) registrada em Nova Jersey.",
 		},
 		services: {
 			tag: "O Que Oferecemos",
@@ -366,6 +378,7 @@ export const CONTENT: Record<Lang, Content> = {
 					name: "Vedad Delic, Ph.D.",
 					role: "Redator de Propostas",
 					bio: "Cientista pesquisador no East Orange VA NJ Health Care System e Professor Assistente na Rutgers New Jersey Medical School. Já captou milhões de dólares em financiamento federal competitivo para pesquisa.",
+					email: "vedad.delic@rutgers.edu",
 				},
 				{
 					id: "team-tyrone",
@@ -373,6 +386,15 @@ export const CONTENT: Record<Lang, Content> = {
 					name: "Tyrone Taylor",
 					role: "Gerente de Subvenções",
 					bio: "Diretor Financeiro do VA New Jersey Health Care System, com três décadas de experiência liderando finanças federais, orçamento e programas de mentoria para carreiras no serviço público.",
+					email: "tcap156@verizon.net",
+				},
+				{
+					id: "team-sadia",
+					src: "/assets/sadia-zafar.jpg",
+					photoPosition: "center top",
+					name: "Sadia Zafar",
+					role: "Mentora e Consultora de Carreira em Saúde",
+					bio: "Professora Assistente Clínica na Fairleigh Dickinson University e Assistente Médica certificada, especializada em psiquiatria. Orienta estudantes que buscam carreiras em medicina e ciências da saúde, oferecendo mentoria, planejamento de carreira e desenvolvimento profissional.",
 				},
 			],
 		},

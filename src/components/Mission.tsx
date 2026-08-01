@@ -11,6 +11,7 @@ export function Mission({ t }: { t: Content }) {
         </h2>
         <p className="body-text">{t.mission.text}</p>
         <p className="body-text body-text--last">{t.mission.serveText}</p>
+        <p className="mission-status">{t.mission.statusNote}</p>
       </Reveal>
     </section>
   );

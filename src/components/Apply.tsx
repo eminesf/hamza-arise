@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function Apply({ t }: { t: Content }) {
   return (
-    <section id="apply" className="section section--cream">
+    <section id="apply" className="section section--white">
       <div className="apply-wrap">
         <Reveal className="apply-copy">
           <span className="section-tag">{t.apply.tag}</span>

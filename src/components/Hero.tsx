@@ -5,7 +5,6 @@ import { Logo } from "./Logo";
 export function Hero({ t }: { t: Content }) {
 	return (
 		<section id="hero" className="hero" aria-label="ARISE Initiative">
-			<p className="hero-eyebrow">{t.hero.eyebrow}</p>
 			<Logo
 				as="h1"
 				size="lg"
@@ -19,7 +18,7 @@ export function Hero({ t }: { t: Content }) {
 				<a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="btn-gold">
 					{t.hero.cta3}
 				</a>
-				<a href="#services" className="btn-outline">
+				<a href="#mission" className="btn-outline">
 					{t.hero.cta1}
 				</a>
 				<a

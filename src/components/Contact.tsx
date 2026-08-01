@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function Contact({ t }: { t: Content }) {
   return (
-    <section id="contact" className="section section--white">
+    <section id="contact" className="section section--cream">
       <Reveal className="contact-wrap">
         <span className="section-tag">{t.contact.tag}</span>
         <h2 className="section-title">

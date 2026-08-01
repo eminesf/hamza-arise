@@ -40,24 +40,39 @@ export function Team({ t }: { t: Content }) {
 
         <p className="team-subtag">{t.team.supportTag}</p>
         <div className="members-grid members-grid--last">
-          {t.team.members.map((m, i) => (
-            <Reveal as="article" className="member-card" delay={i * 80} key={m.id}>
-              <img
-                src={m.src}
-                alt={m.name}
-                className="member-photo"
-                width={120}
-                height={120}
-                loading="lazy"
-                decoding="async"
-              />
-              <div>
-                <h3>{m.name}</h3>
-                <p className="member-role">{m.role}</p>
-                <p className="member-bio">{m.bio}</p>
-              </div>
-            </Reveal>
-          ))}
+          {t.team.members.map((m, i) => {
+            const isLastAlone =
+              t.team.members.length % 2 !== 0 && i === t.team.members.length - 1;
+            return (
+              <Reveal
+                as="article"
+                className={`member-card${isLastAlone ? " member-card--centered" : ""}`}
+                delay={i * 80}
+                key={m.id}
+              >
+                <img
+                  src={m.src}
+                  alt={m.name}
+                  className="member-photo"
+                  style={m.photoPosition ? { objectPosition: m.photoPosition } : undefined}
+                  width={120}
+                  height={120}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div>
+                  <h3>{m.name}</h3>
+                  <p className="member-role">{m.role}</p>
+                  <p className="member-bio">{m.bio}</p>
+                  {m.email && (
+                    <a href={`mailto:${m.email}`} className="member-email">
+                      {m.email}
+                    </a>
+                  )}
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
 
       </div>
