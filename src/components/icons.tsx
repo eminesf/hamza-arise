@@ -29,3 +29,12 @@ export function BrFlag() {
     </svg>
   );
 }
+
+export function EsFlag() {
+  return (
+    <svg width={20} height={14} viewBox="0 0 20 14" style={{ borderRadius: 2, flexShrink: 0 }} aria-hidden="true">
+      <rect width={20} height={14} fill="#AA151B" />
+      <rect y={3.5} width={20} height={7} fill="#F1BF00" />
+    </svg>
+  );
+}

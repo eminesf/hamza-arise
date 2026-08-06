@@ -1,25 +1,51 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import type { Content, Lang } from "../i18n/content";
 import { useActiveSection } from "../hooks/useActiveSection";
-import { BrFlag, InstagramIcon, UsFlag } from "./icons";
+import { BrFlag, EsFlag, InstagramIcon, UsFlag } from "./icons";
 
 interface Props {
   t: Content;
   lang: Lang;
-  onToggleLang: () => void;
+  onSetLang: (lang: Lang) => void;
 }
 
 const SECTION_IDS = ["about", "mission", "services", "team", "apply", "contact", "gallery"];
+
+const LANG_OPTIONS: { value: Lang; label: string; flag: () => ReactNode }[] = [
+  { value: "en", label: "EN", flag: () => <UsFlag /> },
+  { value: "pt-br", label: "PT-BR", flag: () => <BrFlag /> },
+  { value: "es", label: "ES", flag: () => <EsFlag /> },
+];
 
 interface NavLink {
   href: string;
   label: string;
 }
 
-export function Navbar({ t, lang, onToggleLang }: Props) {
-  const isPt = lang === "pt-br";
+export function Navbar({ t, lang, onSetLang }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+  const current = LANG_OPTIONS.find((o) => o.value === lang) ?? LANG_OPTIONS[0];
+
+  useEffect(() => {
+    if (!langOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLangOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [langOpen]);
   const { pathname } = useLocation();
   const activeId = useActiveSection(SECTION_IDS, pathname);
   const isHome = pathname === "/";
@@ -86,15 +112,40 @@ export function Navbar({ t, lang, onToggleLang }: Props) {
           >
             <InstagramIcon color="#0B1D3A" />
           </a>
-          <button
-            type="button"
-            className="lang-toggle"
-            onClick={onToggleLang}
-            aria-label={isPt ? "Switch to English" : "Mudar para Português"}
-          >
-            {isPt ? <UsFlag /> : <BrFlag />}
-            {isPt ? "EN" : "PT-BR"}
-          </button>
+          <div className="lang-switcher" ref={langRef}>
+            <button
+              type="button"
+              className="lang-toggle"
+              onClick={() => setLangOpen((open) => !open)}
+              aria-haspopup="listbox"
+              aria-expanded={langOpen}
+              aria-label="Change language"
+            >
+              {current.flag()}
+              {current.label}
+            </button>
+            {langOpen && (
+              <ul className="lang-menu" role="listbox">
+                {LANG_OPTIONS.map((opt) => (
+                  <li key={opt.value} role="option" aria-selected={opt.value === lang}>
+                    <button
+                      type="button"
+                      className={
+                        opt.value === lang ? "lang-menu__item is-active" : "lang-menu__item"
+                      }
+                      onClick={() => {
+                        onSetLang(opt.value);
+                        setLangOpen(false);
+                      }}
+                    >
+                      {opt.flag()}
+                      {opt.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
           <button
             type="button"
             className="nav-burger"
