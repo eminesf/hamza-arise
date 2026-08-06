@@ -9,6 +9,9 @@ export function Mission({ t }: { t: Content }) {
         <h2 className="section-title">
           {t.mission.title} <em>{t.mission.titleEm}</em>
         </h2>
+        {t.mission.titleFootnote && (
+          <p className="mission-title-footnote">{t.mission.titleFootnote}</p>
+        )}
         <p className="body-text">{t.mission.text}</p>
         <p className="body-text body-text--last">{t.mission.serveText}</p>
         <p className="mission-status">{t.mission.statusNote}</p>

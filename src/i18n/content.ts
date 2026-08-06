@@ -47,12 +47,14 @@ export interface Content {
 		p2: string;
 		quote: string;
 		quoteCite: string;
-		photoPlaceholder: string;
+		photoCreditBy: string;
+		photoCreditOn: string;
 	};
 	mission: {
 		tag: string;
 		title: string;
 		titleEm: string;
+		titleFootnote: string;
 		text: string;
 		serveText: string;
 		statusNote: string;
@@ -142,21 +144,24 @@ export const CONTENT: Record<Lang, Content> = {
 			tag: "About ARISE",
 			title: "Grown from",
 			titleEm: "research, built on care",
-			p1: "ARISE Initiative, Inc. is a New Jersey-based 501(c)(3) nonprofit dedicated to helping students persist, graduate, and thrive. Dr. Hamza Seidu Wedam founded ARISE after his doctoral research on student success programs convinced him of a simple truth: with the right support, students who might otherwise fall through the cracks can go on to finish what they started.",
-			p2: "We offer mentorship, academic coaching, advising, leadership development, financial aid guidance, and career counseling, all within a community that treats every participant as a whole person. Our programs welcome students of every background. We give special attention to first-generation and underserved students, and to anyone motivated to grow who simply lacks a support network.",
+			p1: "ARISE Initiative, Inc. is a New Jersey-based 501(c)(3) nonprofit dedicated to helping students persist, graduate, and thrive. Dr. Hamza Seidu Wedam founded ARISE after his doctoral research on student success programs convinced him of a simple truth: with the right support, students who might otherwise fall through the cracks can go on become successful academically.",
+			p2: "We offer mentorship, academic coaching, advising, leadership development, financial aid guidance, and career counseling, all within a community that treats every student as a whole person. Our programs welcome students of every background. We give special attention to first-generation and underserved students, and to anyone motivated to grow who simply lacks a support network.",
 			quote:
 				"A structured, dignity-first support system, open to everyone, that turns overlooked potential into real momentum.",
 			quoteCite: "Why Students Join ARISE",
-			photoPlaceholder: "Photo coming soon",
+			photoCreditBy: "Photo by",
+			photoCreditOn: "on Unsplash",
 		},
 		mission: {
 			tag: "Our Mission",
 			title: "Helping students",
-			titleEm: "rise, on their terms",
+			titleEm: "ARISE from where they are",
+			titleFootnote: "",
 			text: "The mission of ARISE is to help students of all backgrounds succeed academically, professionally, and personally through mentorship, coaching, advising, leadership development, financial aid guidance, and career counseling. We exist to remove the barriers that push capable students off course, to activate potential that has been overlooked, and to develop confident, resilient students.",
 			serveText:
 				"ARISE serves students of every racial, ethnic, cultural, gender, and socioeconomic background. We pay particular attention to first-generation students, community college and four-year students, people returning to the workforce, and emerging leaders who need structure and support to reach their goals. Our doors are open to everyone.",
-			statusNote: "ARISE Initiative, Inc. is a registered New Jersey 501(c)(3) nonprofit organization.",
+			statusNote:
+				"ARISE Initiative, Inc. is a registered New Jersey 501(c)(3) nonprofit organization.",
 		},
 		services: {
 			tag: "What We Offer",
@@ -196,7 +201,7 @@ export const CONTENT: Record<Lang, Content> = {
 		impact: {
 			tag: "Why It Matters",
 			title: "Turning potential into",
-			titleEm: "completion",
+			titleEm: "success",
 			text: "ARISE is designed to increase college enrollment, strengthen retention and persistence, and improve academic performance. Personalized mentoring and advising help students build stronger study habits, raise their GPA, and stay focused on graduation. Financial aid guidance clears up the confusion around paying for school.",
 			stats: [
 				{ value: "2024", label: "Founded" },
@@ -211,7 +216,8 @@ export const CONTENT: Record<Lang, Content> = {
 			titleEm: "the ARISE community",
 			desc: "A look at the mentors, students, and moments behind the mission.",
 			cta: "View Full Gallery",
-			pageDesc: "A look at the mentors, students, and moments behind the ARISE mission.",
+			pageDesc:
+				"A look at the mentors, students, and moments behind the ARISE mission.",
 			photoLabel: "Photo",
 			backLink: "Back to Home",
 		},
@@ -231,14 +237,14 @@ export const CONTENT: Record<Lang, Content> = {
 			founderCta: "Visit Founder's Site",
 			founderPhotoAlt:
 				"Portrait of Dr. Hamza Seidu Wedam, Founder and Executive Director of ARISE Initiative",
-			supportTag: "Support Behind the Operations",
+			supportTag: "Team",
 			members: [
 				{
 					id: "team-vedad",
 					src: "/assets/vedad-delic.png",
 					name: "Vedad Delic, Ph.D.",
 					role: "Grant Writer",
-					bio: "Research scientist at the East Orange VA NJ Health Care System and Assistant Professor at Rutgers New Jersey Medical School. He has secured millions of dollars in competitive federal research funding.",
+					bio: "Professor at Rutgers New Jersey Medical School and a Research scientist at the East Orange VA NJ Health Care System. He has secured millions of dollars in competitive federal research funding.",
 					email: "vedad.delic@rutgers.edu",
 				},
 				{
@@ -246,7 +252,7 @@ export const CONTENT: Record<Lang, Content> = {
 					src: "/assets/tyrone-taylor.png",
 					name: "Tyrone Taylor",
 					role: "Grant Manager",
-					bio: "Chief Financial Officer of the VA New Jersey Health Care System, with three decades of experience leading federal finance, budgeting, and mentorship programs for public service careers.",
+					bio: "Retired Chief Financial Officer of the VA New Jersey Health Care System, with three decades of experience leading federal finance, budgeting, and mentorship programs for public service careers.",
 					email: "tcap156@verizon.net",
 				},
 				{
@@ -314,21 +320,24 @@ export const CONTENT: Record<Lang, Content> = {
 			tag: "Sobre a ARISE",
 			title: "Nascida da pesquisa,",
 			titleEm: "construída com cuidado",
-			p1: "A ARISE Initiative, Inc. é uma organização sem fins lucrativos 501(c)(3) de Nova Jersey dedicada a ajudar estudantes a persistir, se formar e prosperar. O Dr. Hamza Seidu Wedam fundou a ARISE depois que sua pesquisa de doutorado sobre programas de sucesso estudantil o convenceu de uma verdade simples: com o apoio certo, estudantes que poderiam ficar pelo caminho conseguem terminar o que começaram.",
-			p2: "Oferecemos mentoria, coaching acadêmico, orientação, desenvolvimento de liderança, apoio com auxílio financeiro e aconselhamento de carreira, tudo dentro de uma comunidade que trata cada participante como uma pessoa inteira. Nossos programas recebem estudantes de todas as origens. Damos atenção especial a estudantes de primeira geração e de baixa renda, e a qualquer pessoa motivada a crescer que não tenha uma rede de apoio.",
+			p1: "A ARISE Initiative, Inc. é uma organização sem fins lucrativos 501(c)(3) de Nova Jersey dedicada a ajudar estudantes a persistir, se formar e prosperar. O Dr. Hamza Seidu Wedam fundou a ARISE depois que sua pesquisa de doutorado sobre programas de sucesso estudantil o convenceu de uma verdade simples: com o apoio certo, estudantes que poderiam ficar pelo caminho podem alcançar sucesso acadêmico.",
+			p2: "Oferecemos mentoria, coaching acadêmico, orientação, desenvolvimento de liderança, apoio com auxílio financeiro e aconselhamento de carreira, tudo dentro de uma comunidade que trata cada estudante como uma pessoa inteira. Nossos programas recebem estudantes de todas as origens. Damos atenção especial a estudantes de primeira geração e de baixa renda, e a qualquer pessoa motivada a crescer que não tenha uma rede de apoio.",
 			quote:
 				"Um sistema de apoio estruturado, com a dignidade em primeiro lugar, aberto a todos, que transforma potencial esquecido em impulso real.",
 			quoteCite: "Por que os estudantes se juntam à ARISE",
-			photoPlaceholder: "Foto em breve",
+			photoCreditBy: "Foto de",
+			photoCreditOn: "na Unsplash",
 		},
 		mission: {
 			tag: "Nossa Missão",
-			title: "Ajudando estudantes a se levantarem,",
-			titleEm: "em seus próprios termos",
+			title: "Ajudando estudantes a",
+			titleEm: "ARISE* de onde estão",
+			titleFootnote: '*em inglês, "Arise" significa se erguer, se levantar.',
 			text: "A missão da ARISE é ajudar estudantes de todas as origens a ter sucesso acadêmico, profissional e pessoal por meio de mentoria, coaching, orientação, desenvolvimento de liderança, apoio com auxílio financeiro e aconselhamento de carreira. Existimos para remover as barreiras que desviam estudantes capazes, ativar potenciais esquecidos e formar estudantes confiantes e resilientes.",
 			serveText:
 				"A ARISE atende estudantes de toda origem racial, étnica, cultural, de gênero e socioeconômica. Damos atenção especial a estudantes de primeira geração, estudantes de faculdades comunitárias e de quatro anos, pessoas retornando ao mercado de trabalho e líderes emergentes que precisam de estrutura e apoio para alcançar seus objetivos. Nossas portas estão abertas a todos.",
-			statusNote: "A ARISE Initiative, Inc. é uma organização sem fins lucrativos 501(c)(3) registrada em Nova Jersey.",
+			statusNote:
+				"A ARISE Initiative, Inc. é uma organização sem fins lucrativos 501(c)(3) registrada em Nova Jersey.",
 		},
 		services: {
 			tag: "O Que Oferecemos",
@@ -368,7 +377,7 @@ export const CONTENT: Record<Lang, Content> = {
 		impact: {
 			tag: "Por Que Importa",
 			title: "Transformando potencial em",
-			titleEm: "conclusão",
+			titleEm: "sucesso",
 			text: "A ARISE foi desenhada para aumentar o ingresso na faculdade, fortalecer a retenção e a persistência, e melhorar o desempenho acadêmico. A mentoria e a orientação personalizadas ajudam os estudantes a criar hábitos de estudo mais fortes, elevar sua média e manter o foco na formatura. O apoio com auxílio financeiro esclarece as dúvidas sobre como pagar os estudos.",
 			stats: [
 				{ value: "2024", label: "Fundação" },
@@ -383,7 +392,8 @@ export const CONTENT: Record<Lang, Content> = {
 			titleEm: "da comunidade ARISE",
 			desc: "Um retrato dos mentores, estudantes e momentos por trás da missão.",
 			cta: "Ver Galeria Completa",
-			pageDesc: "Um retrato dos mentores, estudantes e momentos por trás da missão da ARISE.",
+			pageDesc:
+				"Um retrato dos mentores, estudantes e momentos por trás da missão da ARISE.",
 			photoLabel: "Foto",
 			backLink: "Voltar ao Início",
 		},
@@ -403,14 +413,14 @@ export const CONTENT: Record<Lang, Content> = {
 			founderCta: "Visitar Site do Fundador",
 			founderPhotoAlt:
 				"Retrato do Dr. Hamza Seidu Wedam, Fundador e Diretor Executivo da ARISE Initiative",
-			supportTag: "Apoio Por Trás da Operação",
+			supportTag: "Equipe",
 			members: [
 				{
 					id: "team-vedad",
 					src: "/assets/vedad-delic.png",
 					name: "Vedad Delic, Ph.D.",
 					role: "Redator de Propostas",
-					bio: "Cientista pesquisador no East Orange VA NJ Health Care System e Professor Assistente na Rutgers New Jersey Medical School. Já captou milhões de dólares em financiamento federal competitivo para pesquisa.",
+					bio: "Professor na Rutgers New Jersey Medical School e Cientista Pesquisador no East Orange VA NJ Health Care System. Já captou milhões de dólares em financiamento federal competitivo para pesquisa.",
 					email: "vedad.delic@rutgers.edu",
 				},
 				{
@@ -418,7 +428,7 @@ export const CONTENT: Record<Lang, Content> = {
 					src: "/assets/tyrone-taylor.png",
 					name: "Tyrone Taylor",
 					role: "Gerente de Subvenções",
-					bio: "Diretor Financeiro do VA New Jersey Health Care System, com três décadas de experiência liderando finanças federais, orçamento e programas de mentoria para carreiras no serviço público.",
+					bio: "Diretor Financeiro aposentado do VA New Jersey Health Care System, com três décadas de experiência liderando finanças federais, orçamento e programas de mentoria para carreiras no serviço público.",
 					email: "tcap156@verizon.net",
 				},
 				{
