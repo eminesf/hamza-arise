@@ -47,8 +47,6 @@ export interface Content {
 		p2: string;
 		quote: string;
 		quoteCite: string;
-		photoCreditBy: string;
-		photoCreditOn: string;
 	};
 	mission: {
 		tag: string;
@@ -149,8 +147,6 @@ export const CONTENT: Record<Lang, Content> = {
 			quote:
 				"A structured, dignity-first support system, open to everyone, that turns overlooked potential into real momentum.",
 			quoteCite: "Why Students Join ARISE",
-			photoCreditBy: "Photo by",
-			photoCreditOn: "on Unsplash",
 		},
 		mission: {
 			tag: "Our Mission",
@@ -231,7 +227,7 @@ export const CONTENT: Record<Lang, Content> = {
 			titleEm: "experience",
 			founderLabel: "Founder & Executive Director",
 			founderName: "Hamza Seidu Wedam, Ed.D.",
-			founderRole: "Founder and Executive Director, ARISE Initiative, Inc.",
+			founderRole: "Founder and Executive Director",
 			founderBio:
 				"Dr. Wedam brings more than fifteen years of leadership experience in higher education, spanning enrollment management, registrar operations, and student services. He is the author of “Arise From Where You Are,” a book based on his doctoral research across seven community colleges in five states.",
 			founderCta: "Visit Founder's Site",
@@ -325,8 +321,6 @@ export const CONTENT: Record<Lang, Content> = {
 			quote:
 				"Um sistema de apoio estruturado, com a dignidade em primeiro lugar, aberto a todos, que transforma potencial esquecido em impulso real.",
 			quoteCite: "Por que os estudantes se juntam à ARISE",
-			photoCreditBy: "Foto de",
-			photoCreditOn: "na Unsplash",
 		},
 		mission: {
 			tag: "Nossa Missão",
@@ -407,7 +401,7 @@ export const CONTENT: Record<Lang, Content> = {
 			titleEm: "experiência",
 			founderLabel: "Fundador e Diretor Executivo",
 			founderName: "Hamza Seidu Wedam, Ed.D.",
-			founderRole: "Fundador e Diretor Executivo, ARISE Initiative, Inc.",
+			founderRole: "Fundador e Diretor Executivo",
 			founderBio:
 				"O Dr. Wedam tem mais de quinze anos de experiência de liderança no ensino superior, passando por gestão de matrículas, secretaria acadêmica e serviços estudantis. É autor de “Arise From Where You Are”, livro baseado em sua pesquisa de doutorado em sete faculdades comunitárias de cinco estados.",
 			founderCta: "Visitar Site do Fundador",

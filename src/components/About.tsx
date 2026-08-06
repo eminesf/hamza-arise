@@ -25,24 +25,6 @@ export function About({ t }: { t: Content }) {
             className="about-photo"
             loading="lazy"
           />
-          <p className="about-photo-credit">
-            {t.about.photoCreditBy}{" "}
-            <a
-              href="https://unsplash.com/pt-br/@jeffersonsees?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Jefferson Sees
-            </a>{" "}
-            {t.about.photoCreditOn}{" "}
-            <a
-              href="https://unsplash.com/pt-br/fotografias/um-homem-em-um-manto-andando-por-um-lance-de-escadas-QGOWg4m3C7o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Unsplash
-            </a>
-          </p>
         </Reveal>
       </div>
     </section>

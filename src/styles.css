@@ -635,23 +635,6 @@ img {
 	display: block;
 }
 
-.about-photo-credit {
-	margin: -0.1rem 0 0;
-	font-size: 0.6rem;
-	color: rgba(15, 23, 42, 0.3);
-	text-align: right;
-	transform: scale(0.75);
-	transform-origin: top right;
-}
-
-.about-photo-credit a {
-	color: rgba(15, 23, 42, 0.5);
-}
-
-.about-photo-credit a:hover {
-	color: var(--gold-muted);
-}
-
 @media (max-width: 860px) {
 	.about-grid {
 		grid-template-columns: 1fr;
@@ -854,7 +837,7 @@ img {
 	aspect-ratio: 1 / 1;
 	border-radius: 50%;
 	object-fit: cover;
-	object-position: 0 19%;
+	object-position: center 10%;
 	display: block;
 }
 
