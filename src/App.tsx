@@ -16,7 +16,7 @@ import { Footer } from "./components/Footer";
 import { GalleryPage } from "./components/GalleryPage";
 
 export default function App() {
-  const { lang, t, toggleLang } = useLanguage();
+  const { lang, t, setLang } = useLanguage();
   const location = useLocation();
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function App() {
   return (
     <>
       <div className="grain-overlay" aria-hidden="true" />
-      <Navbar t={t} lang={lang} onToggleLang={toggleLang} />
+      <Navbar t={t} lang={lang} onSetLang={setLang} />
       <Routes>
         <Route
           path="/"

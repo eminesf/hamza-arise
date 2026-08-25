@@ -1,4 +1,4 @@
-export type Lang = "en" | "pt-br";
+export type Lang = "en" | "pt-br" | "es";
 
 export interface ServiceItem {
 	title: string;
@@ -464,6 +464,180 @@ export const CONTENT: Record<Lang, Content> = {
 				"ARISE Initiative, Inc. | Mentoria Estudantil Gratuita em Nova Jersey",
 			description:
 				"A ARISE Initiative, Inc. é uma organização sem fins lucrativos 501(c)(3) de Nova Jersey que ajuda estudantes a persistir, se formar e prosperar por meio de mentoria, coaching acadêmico, orientação e apoio com auxílio financeiro, tudo gratuito. Fundada pelo Dr. Hamza Seidu Wedam.",
+		},
+	},
+	es: {
+		nav: {
+			about: "Sobre Nosotros",
+			mission: "Misión",
+			services: "Servicios",
+			gallery: "Galería",
+			team: "Equipo",
+			apply: "Inscribirse",
+			contact: "Contacto",
+		},
+		hero: {
+			subword: "Initiative",
+			tagline: "“Rise From Where You Are.”",
+			acronym:
+				"ARISE significa Advancing Resilience, Inspiration, Success, and Empowerment.",
+			desc: "ARISE Initiative, Inc. ayuda a los estudiantes a perseverar, graduarse y prosperar. Ofrecemos mentoría, coaching, asesoría, desarrollo de liderazgo y orientación sobre ayuda financiera, todo completamente gratuito para el estudiante. ARISE fue fundada por el Dr. Hamza Seidu Wedam y surgió de su investigación doctoral sobre el éxito estudiantil.",
+			cta1: "Ver Galería",
+			cta2: "Conoce al Fundador",
+			cta3: "Inscríbete Ahora",
+		},
+		about: {
+			tag: "Sobre ARISE",
+			title: "Nacida de la investigación,",
+			titleEm: "construida con cuidado",
+			p1: "ARISE Initiative, Inc. es una organización sin fines de lucro 501(c)(3) con sede en Nueva Jersey, dedicada a ayudar a los estudiantes a perseverar, graduarse y prosperar. El Dr. Hamza Seidu Wedam fundó ARISE después de que su investigación doctoral sobre programas de éxito estudiantil lo convenciera de una verdad simple: con el apoyo adecuado, los estudiantes que de otro modo podrían quedar en el camino pueden lograr el éxito académico.",
+			p2: "Ofrecemos mentoría, coaching académico, asesoría, desarrollo de liderazgo, orientación sobre ayuda financiera y asesoramiento profesional, todo dentro de una comunidad que trata a cada estudiante como una persona íntegra. Nuestros programas dan la bienvenida a estudiantes de todos los orígenes. Prestamos especial atención a los estudiantes de primera generación y con pocos recursos, y a cualquier persona motivada a crecer que simplemente carezca de una red de apoyo.",
+			quote:
+				"Un sistema de apoyo estructurado, centrado en la dignidad, abierto a todos, que convierte el potencial desapercibido en impulso real.",
+			quoteCite: "Por qué los estudiantes se unen a ARISE",
+		},
+		mission: {
+			tag: "Nuestra Misión",
+			title: "Ayudando a los estudiantes a",
+			titleEm: "ARISE* desde donde están",
+			titleFootnote: '*en inglés, "arise" significa levantarse, alzarse.',
+			text: "La misión de ARISE es ayudar a estudiantes de todos los orígenes a tener éxito académico, profesional y personal a través de mentoría, coaching, asesoría, desarrollo de liderazgo, orientación sobre ayuda financiera y asesoramiento profesional. Existimos para eliminar las barreras que desvían a estudiantes capaces, activar el potencial que ha sido pasado por alto y formar estudiantes seguros y resilientes.",
+			serveText:
+				"ARISE atiende a estudiantes de todo origen racial, étnico, cultural, de género y socioeconómico. Prestamos especial atención a estudiantes de primera generación, estudiantes de universidades comunitarias y de cuatro años, personas que regresan a la fuerza laboral y líderes emergentes que necesitan estructura y apoyo para alcanzar sus metas. Nuestras puertas están abiertas a todos.",
+			statusNote:
+				"ARISE Initiative, Inc. es una organización sin fines de lucro 501(c)(3) registrada en Nueva Jersey.",
+		},
+		services: {
+			tag: "Lo Que Ofrecemos",
+			title: "Un modelo integrado de",
+			titleEm: "apoyo",
+			items: [
+				{
+					title: "Mentoría",
+					desc: "Conectamos a los estudiantes con modelos a seguir positivos y líderes comunitarios que brindan orientación, responsabilidad y aliento.",
+				},
+				{
+					title: "Coaching Académico",
+					desc: "Los estudiantes desarrollan hábitos de estudio, gestión del tiempo, establecimiento de metas y hábitos de persistencia que impulsan el éxito académico.",
+				},
+				{
+					title: "Asesoría Académica y Universitaria",
+					desc: "Guiamos a los estudiantes en la selección de cursos, la planificación de su carrera y la inscripción para mantenerlos encaminados hacia la graduación.",
+				},
+				{
+					title: "Ayuda Financiera",
+					desc: "Ayudamos a los estudiantes a acceder a becas, subvenciones y ayuda financiera, y también ofrecemos apoyo con útiles escolares.",
+				},
+				{
+					title: "Desarrollo de Liderazgo",
+					desc: "Los estudiantes fortalecen su comunicación, trabajo en equipo, participación cívica y habilidades de liderazgo de servicio.",
+				},
+				{
+					title: "Preparación Profesional",
+					desc: "Elaboración de currículum, preparación para entrevistas, prácticas profesionales y apoyo en la colocación laboral.",
+				},
+				{
+					title: "Construcción de Comunidad",
+					desc: "Talleres, sesiones dirigidas por expertos y una cultura de reconocimiento que ayuda a los estudiantes a sentirse vistos y apoyados.",
+				},
+			],
+		},
+		impact: {
+			tag: "Por Qué Importa",
+			title: "Convirtiendo el potencial en",
+			titleEm: "éxito",
+			text: "ARISE está diseñada para aumentar la matrícula universitaria, fortalecer la retención y la persistencia, y mejorar el rendimiento académico. La mentoría y asesoría personalizadas ayudan a los estudiantes a desarrollar mejores hábitos de estudio, elevar su promedio y mantenerse enfocados en la graduación. La orientación sobre ayuda financiera aclara la confusión sobre cómo pagar los estudios.",
+			stats: [
+				{ value: "2024", label: "Fundación" },
+				{ value: "7", label: "Servicios Principales" },
+				{ value: "8", label: "Instituciones Asociadas" },
+				{ value: "100%", label: "Gratis p/ Estudiantes" },
+			],
+		},
+		gallery: {
+			tag: "Galería",
+			title: "La vida dentro",
+			titleEm: "de la comunidad ARISE",
+			desc: "Un vistazo a los mentores, estudiantes y momentos detrás de la misión.",
+			cta: "Ver Galería Completa",
+			pageDesc:
+				"Un vistazo a los mentores, estudiantes y momentos detrás de la misión de ARISE.",
+			photoLabel: "Foto",
+			backLink: "Volver al Inicio",
+		},
+		quoteBanner: {
+			text: "“Vienen por un mentor que cree en ellos, un coach que los ayuda a mantenerse en el camino correcto, y un asesor que hace que la universidad se sienta manejable en lugar de abrumadora.”",
+			cite: "Por qué los estudiantes se unen a ARISE",
+		},
+		team: {
+			tag: "Nuestro Equipo",
+			title: "Liderados por la",
+			titleEm: "experiencia",
+			founderLabel: "Fundador y Director Ejecutivo",
+			founderName: "Hamza Seidu Wedam, Ed.D.",
+			founderRole: "Fundador y Director Ejecutivo",
+			founderBio:
+				"El Dr. Wedam aporta más de quince años de experiencia de liderazgo en educación superior, abarcando la gestión de matrículas, operaciones de registro académico y servicios estudiantiles. Es autor de “Arise From Where You Are”, un libro basado en su investigación doctoral realizada en siete universidades comunitarias de cinco estados.",
+			founderCta: "Visitar el Sitio del Fundador",
+			founderPhotoAlt:
+				"Retrato del Dr. Hamza Seidu Wedam, Fundador y Director Ejecutivo de ARISE Initiative",
+			supportTag: "Equipo",
+			members: [
+				{
+					id: "team-vedad",
+					src: "/assets/vedad-delic.png",
+					name: "Vedad Delic, Ph.D.",
+					role: "Redactor de Propuestas",
+					bio: "Profesor en Rutgers New Jersey Medical School y Científico Investigador en East Orange VA NJ Health Care System. Ha conseguido millones de dólares en financiamiento federal competitivo para investigación.",
+					email: "vedad.delic@rutgers.edu",
+				},
+				{
+					id: "team-tyrone",
+					src: "/assets/tyrone-taylor.png",
+					name: "Tyrone Taylor",
+					role: "Gerente de Subvenciones",
+					bio: "Director Financiero jubilado del VA New Jersey Health Care System, con tres décadas de experiencia liderando finanzas federales, presupuestos y programas de mentoría para carreras de servicio público.",
+					email: "tcap156@verizon.net",
+				},
+				{
+					id: "team-sadia",
+					src: "/assets/sadia-zafar.jpg",
+					photoPosition: "center top",
+					name: "Sadia Zafar",
+					role: "Mentora y Asesora de Carrera en Salud",
+					bio: "Profesora Clínica Asistente en Fairleigh Dickinson University y Asistente Médica certificada, especializada en psiquiatría. Guía a estudiantes que buscan carreras en medicina y ciencias de la salud, brindando mentoría, planificación profesional y desarrollo profesional.",
+				},
+			],
+		},
+		apply: {
+			tag: "Comienza Ahora",
+			title: "¿Listo para",
+			titleEm: "inscribirte?",
+			desc: "Escanea el código QR con tu teléfono, o toca el botón de abajo para abrir nuestro formulario de inscripción. Solo toma unos minutos y es completamente gratis.",
+			cta: "Abrir el Formulario de Inscripción",
+			qrAlt: "Código QR que enlaza al formulario de inscripción de ARISE",
+			qrHint: "Escanea con la cámara de tu teléfono",
+		},
+		contact: {
+			tag: "Participa",
+			title: "Sé socio de",
+			titleEm: "ARISE",
+			desc: "Ya seas estudiante, institución, mentor o colaborador, nos encantaría saber de ti.",
+			locationLabel: "Ubicación",
+			location: "Nueva Jersey, EE. UU.",
+			emailLabel: "Correo Electrónico",
+			instagramLabel: "Instagram",
+		},
+		footer: {
+			tagline: "“Rise From Where You Are.”",
+			founderLink: "Fundada por el Dr. Hamza Seidu Wedam. Visita su sitio",
+			copyright: "ARISE Initiative, Inc.",
+		},
+		seo: {
+			title:
+				"ARISE Initiative, Inc. | Mentoría Estudiantil Gratuita en Nueva Jersey",
+			description:
+				"ARISE Initiative, Inc. es una organización sin fines de lucro 501(c)(3) de Nueva Jersey que ayuda a estudiantes a perseverar, graduarse y prosperar a través de mentoría gratuita, coaching académico, asesoría, desarrollo de liderazgo y orientación sobre ayuda financiera. Fundada por el Dr. Hamza Seidu Wedam.",
 		},
 	},
 };
